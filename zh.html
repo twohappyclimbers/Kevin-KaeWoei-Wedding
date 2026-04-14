@@ -24,6 +24,18 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 20px 0;
+
+    background: url("main-photo.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(245, 239, 230, 0.6);
+    z-index: -1;
 }
 
 .back-button {
@@ -52,6 +64,9 @@ body {
     text-align: center;
     border: 1px solid #d8cfc2;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    position: relative;
+    z-index: 1;
 }
 
 .divider {
