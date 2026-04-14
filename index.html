@@ -9,35 +9,49 @@
 
 <style>
 
-body{
-margin:0;
-background:#efe6d8;
-font-family:"Playfair Display",serif;
-display:flex;
-align-items:center;
-justify-content:center;
-min-height:100vh;
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+
+    background: url("main-photo.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(245, 239, 230, 0.6); /* beige tint */
+    z-index: -1;
 }
 
 .card{
-background:#f5efe6;
-width:420px;
-padding:60px 40px;
-text-align:center;
-border:1px solid #d8cfc2;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+    background:#f5efe6;
+    width:420px;
+    padding:60px 40px;
+    text-align:center;
+    border:1px solid #d8cfc2;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
 .names{
-font-family:"Great Vibes",cursive;
-font-size:42px;
-margin-bottom:10px;
+    font-family:"Great Vibes",cursive;
+    font-size:42px;
+    margin-bottom:10px;
 }
 
 .subtitle{
-font-size:16px;
-margin-bottom:40px;
-letter-spacing:1px;
+    font-size:16px;
+    margin-bottom:40px;
+    letter-spacing:1px;
 }
 
 .lang-buttons a{
@@ -73,13 +87,26 @@ opacity:0.8;
 width:90px;
 }
 
+.hero-image {
+    margin: -50px -40px 20px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #d8cfc2;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="card">
-
+<div class="hero-image">
+    <img src="main-photo.jpg" alt="Kevin & Kae Woei">
+</div>
 <div class="names">Kevin & Kae Woei</div>
 <div class="subtitle">Wedding Invitation</div>
 
