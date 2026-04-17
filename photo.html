@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo</title>
+
+<style>
+body{
+margin:0;
+background:#efe6d8;
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+}
+
+img{
+max-width:95%;
+max-height:90vh;
+border-radius:8px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* back button */
+.back-button {
+position: fixed;
+top: 20px;
+left: 20px;
+text-decoration: none;
+font-size: 14px;
+color: #3b2f2f;
+border: 1px solid #3b2f2f;
+padding: 6px 12px;
+background: #f5efe6;
+}
+</style>
+</head>
+
+<body>
+
+<a href="gallery.html" class="back-button">← Back</a>
+
+<img id="photo" src="">
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const img = params.get('img');
+
+document.getElementById('photo').src = "photos/" + img;
+</script>
+
+</body>
+</html>
